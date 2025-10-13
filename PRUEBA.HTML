@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROSDEV GROUP - Innovación y Estrategia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                purple: "#6F42FB",
+                dark: "#1F1F1F",
+                light: "#F8F5FF",
+              },
+              gray: {
+                900: "#1F1F1F",
+                800: "#2D2D2D",
+                700: "#4A4A4A",
+                600: "#666666",
+                500: "#A0A0A0",
+                100: "#F5F5F5",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      .gradient-bg-hero {
+        background-image: linear-gradient(to top right, #6f42fb, #8b5cf6);
+      }
+      .gradient-text {
+        background-image: linear-gradient(to right, #6f42fb, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .shadow-custom-purple {
+        box-shadow: 0 10px 25px -3px rgba(111, 66, 251, 0.3),
+          0 4px 6px -2px rgba(111, 66, 251, 0.1);
+      }
+      .shadow-custom-dark {
+        box-shadow: 0 10px 25px -3px rgba(31, 31, 31, 0.2),
+          0 4px 6px -2px rgba(31, 31, 31, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-700 font-sans antialiased">
+    <div class="bg-gray-100 text-xs text-gray-600">
+      <div
+        class="container mx-auto px-6 py-2 flex justify-between items-center"
+      >
+        <div></div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="font-bold text-brand-purple">ES</a>
+          <span class="text-gray-300">|</span>
+          <a href="#" class="hover:text-brand-purple">EN</a>
+        </div>
+      </div>
+    </div>
+
+    <header
+      class="bg-white/80 sticky top-0 z-50 backdrop-blur-sm border-b border-gray-100"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="/" class="flex items-center space-x-2">
+          <img
+            src="https://via.placeholder.com/150x40.png?text=ROSDEV+GROUP"
+            alt="ROSDEV GROUP Logo"
+            class="h-8 w-auto"
+          />
+        </a>
+        <div
+          class="hidden md:flex items-center space-x-8 text-sm font-semibold"
+        >
+          <a
+            href="#soluciones"
+            class="text-gray-600 hover:text-brand-purple transition-colors"
+            >Soluciones</a
+          >
+          <a
+            href="#proyectos"
+            class="text-gray-600 hover:text-brand-purple transition-colors"
+            >Proyectos</a
+          >
+          <a
+            href="#ecosistema"
+            class="text-gray-600 hover:text-brand-purple transition-colors"
+            >Ecosistema</a
+          >
+          <a
+            href="#contacto"
+            class="bg-brand-purple text-white py-2 px-5 rounded-full hover:bg-opacity-90 shadow-custom-purple transition-all"
+            >Agendar Reunión</a
+          >
+        </div>
+        <button class="md:hidden text-brand-dark">
+          <ion-icon name="menu-outline" class="text-2xl"></ion-icon>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-brand-light">
+        <div
+          class="container mx-auto px-6 py-24 sm:py-32 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="text-left">
+            <h1
+              class="text-4xl md:text-6xl font-extrabold text-brand-dark tracking-tighter leading-tight"
+            >
+              <span class="gradient-text"
+                >Innovación, estrategia y desarrollo</span
+              >
+              para transformar negocios
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-gray-700">
+              Integramos consultoría, desarrollo y branding en un ecosistema
+              único, potenciado por nuestra IA — **AI Autonomous Assistant** —
+              para optimizar sistemas y empoderar equipos.
+            </p>
+            <div
+              class="mt-10 flex flex-col sm:flex-row justify-start items-center gap-4"
+            >
+              <a
+                href="#contacto"
+                class="w-full sm:w-auto bg-brand-purple text-white font-semibold py-3 px-8 rounded-full shadow-custom-purple hover:opacity-90 transition-all transform hover:scale-105"
+              >
+                Agendá una reunión
+              </a>
+              <a
+                href="#proyectos"
+                class="w-full sm:w-auto bg-white text-gray-700 font-semibold py-3 px-8 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
+              >
+                Conocé nuestros proyectos
+              </a>
+            </div>
+          </div>
+          <div
+            class="hidden lg:flex justify-center items-center h-full min-h-[400px] bg-gray-200 rounded-lg"
+          >
+            <span class="text-gray-500">Acá va la ilustración</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="soluciones" class="py-24 sm:py-32">
+        <div
+          class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start"
+        >
+          <div class="lg:sticky lg:top-24 lg:pr-12">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight"
+            >
+              Un socio estratégico para la era digital.
+            </h2>
+            <p class="mt-6 text-lg text-gray-700">
+              ROSDEV GROUP nace para unir tecnología, estrategia y creatividad.
+              La transformación digital no es una opción, es una necesidad, y
+              nuestro equipo está aquí para hacerlo realidad.
+            </p>
+            <p class="mt-4 text-lg text-gray-700">
+              En el corazón de nuestra visión está **AI Autonomous Assistant**,
+              nuestra IA propia que mejora plataformas existentes y potencia a
+              los operadores con herramientas más inteligentes.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-8">
+            <div
+              class="flex items-start gap-6 p-6 bg-white rounded-xl ring-1 ring-gray-200 shadow-lg shadow-gray-100/50"
+            >
+              <div class="bg-brand-light p-3 rounded-lg">
+                <ion-icon
+                  name="hardware-chip-outline"
+                  class="text-2xl text-brand-purple"
+                ></ion-icon>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-dark">
+                  AI Autonomous Assistant
+                </h3>
+                <p class="mt-1 text-gray-600">
+                  Nuestra IA que automatiza procesos y empodera a los operadores
+                  para obtener mejores resultados.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-6 p-6 bg-white rounded-xl ring-1 ring-gray-200 shadow-lg shadow-gray-100/50"
+            >
+              <div class="bg-brand-light p-3 rounded-lg">
+                <ion-icon
+                  name="layers-outline"
+                  class="text-2xl text-brand-purple"
+                ></ion-icon>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-dark">
+                  ERP & Software Factory
+                </h3>
+                <p class="mt-1 text-gray-600">
+                  Sistemas robustos y escalables que optimizan operaciones y
+                  generan eficiencia.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-6 p-6 bg-white rounded-xl ring-1 ring-gray-200 shadow-lg shadow-gray-100/50"
+            >
+              <div class="bg-brand-light p-3 rounded-lg">
+                <ion-icon
+                  name="analytics-outline"
+                  class="text-2xl text-brand-purple"
+                ></ion-icon>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-dark">
+                  Consultoría & BI
+                </h3>
+                <p class="mt-1 text-gray-600">
+                  Transformamos datos en decisiones estratégicas mediante
+                  análisis y herramientas inteligentes.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-6 p-6 bg-white rounded-xl ring-1 ring-gray-200 shadow-lg shadow-gray-100/50"
+            >
+              <div class="bg-brand-light p-3 rounded-lg">
+                <ion-icon
+                  name="business-outline"
+                  class="text-2xl text-brand-purple"
+                ></ion-icon>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-dark">Nearshoring</h3>
+                <p class="mt-1 text-gray-600">
+                  Equipos especializados que se integran de manera ágil y
+                  confiable en tus proyectos.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-6 p-6 bg-white rounded-xl ring-1 ring-gray-200 shadow-lg shadow-gray-100/50"
+            >
+              <div class="bg-brand-light p-3 rounded-lg">
+                <ion-icon
+                  name="brush-outline"
+                  class="text-2xl text-brand-purple"
+                ></ion-icon>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-dark">
+                  Diseño & Branding
+                </h3>
+                <p class="mt-1 text-gray-600">
+                  Construimos marcas sólidas y experiencias digitales que
+                  conectan con las personas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="py-24 sm:py-32 bg-gray-100">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight"
+            >
+              Resultados que generan impacto real
+            </h2>
+            <p class="mt-4 text-lg text-gray-700">
+              No solo lo decimos, lo demostramos. Estos son algunos de nuestros
+              casos de éxito.
+            </p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-200 shadow-md shadow-gray-200/50"
+            >
+              <span class="text-sm font-semibold text-brand-purple uppercase"
+                >Industria logística</span
+              >
+              <p class="mt-4 text-gray-700">
+                <strong class="text-brand-dark">Solución:</strong> Un ERP a
+                medida integrado con AI Autonomous Assistant.
+              </p>
+              <p class="mt-2 text-xl font-bold text-brand-purple">
+                Impacto: 30% menos en costos operativos.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-200 shadow-md shadow-gray-200/50"
+            >
+              <span class="text-sm font-semibold text-brand-purple uppercase"
+                >Retail</span
+              >
+              <p class="mt-4 text-gray-700">
+                <strong class="text-brand-dark">Solución:</strong> Dashboard BI
+                en tiempo real con insights de IA.
+              </p>
+              <p class="mt-2 text-xl font-bold text-brand-purple">
+                Impacto: Decisiones más rápidas y precisas.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-200 shadow-md shadow-gray-200/50"
+            >
+              <span class="text-sm font-semibold text-brand-purple uppercase"
+                >Educación digital</span
+              >
+              <p class="mt-4 text-gray-700">
+                <strong class="text-brand-dark">Solución:</strong> Plataforma de
+                e-learning personalizada con soporte de IA.
+              </p>
+              <p class="mt-2 text-xl font-bold text-brand-purple">
+                Impacto: Mayor alcance y engagement estudiantil.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-200 shadow-md shadow-gray-200/50"
+            >
+              <span class="text-sm font-semibold text-brand-purple uppercase"
+                >Fintech</span
+              >
+              <p class="mt-4 text-gray-700">
+                <strong class="text-brand-dark">Solución:</strong> Rebranding
+                completo con foco digital.
+              </p>
+              <p class="mt-2 text-xl font-bold text-brand-purple">
+                Impacto: Crecimiento en nuevos clientes y capital levantado.
+              </p>
+            </div>
+          </div>
+          <div class="mt-20">
+            <p
+              class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider"
+            >
+              Empresas que confían en nosotros
+            </p>
+            <div
+              class="mt-8 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-8 gap-x-12 items-center"
+            >
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+              <div class="flex justify-center text-gray-400 font-medium">
+                [Logo Cliente]
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="ecosistema"
+        class="py-24 sm:py-32 bg-gradient-to-br from-brand-purple to-purple-700 text-white"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
+            El Ecosistema que potencia el crecimiento
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-purple-200">
+            Tecnología, creatividad e inteligencia trabajando en conjunto para
+            crear una ventaja competitiva única.
+          </p>
+          <div
+            class="mt-12 grid md:grid-cols-5 items-center gap-8 max-w-4xl mx-auto"
+          >
+            <div
+              class="text-center bg-white/10 p-6 rounded-lg backdrop-blur-sm"
+            >
+              <h4 class="font-bold text-white text-lg">Hoomind</h4>
+              <p class="text-sm text-purple-200">Consultoría Estratégica</p>
+            </div>
+            <div class="text-4xl text-purple-300 hidden md:block">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+            <div
+              class="text-center bg-white/10 p-6 rounded-lg backdrop-blur-sm"
+            >
+              <h4 class="font-bold text-white text-lg">Tiny Studio</h4>
+              <p class="text-sm text-purple-200">Branding y Desarrollo Web</p>
+            </div>
+            <div class="text-4xl text-purple-300 hidden md:block">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+            <div
+              class="text-center bg-white/10 p-6 rounded-lg backdrop-blur-sm"
+            >
+              <h4 class="font-bold text-white text-lg">AI Assistant</h4>
+              <p class="text-sm text-purple-200">Inteligencia Artificial</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="bg-gray-900">
+        <div class="container mx-auto px-6 py-20 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            Tu próximo paso comienza hoy
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+            La transformación no puede esperar. Aseguremos que tu empresa esté
+            preparada para los desafíos de hoy y las oportunidades del futuro.
+          </p>
+          <div
+            class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+          >
+            <a
+              href="#"
+              class="w-full sm:w-auto bg-brand-purple text-white font-semibold py-3 px-8 rounded-full shadow-custom-purple hover:opacity-90 transition-all transform hover:scale-105"
+            >
+              Escribinos por WhatsApp
+            </a>
+            <a
+              href="#"
+              class="w-full sm:w-auto bg-gray-700 text-white font-semibold py-3 px-8 rounded-full border border-gray-600 hover:bg-gray-600 transition-colors"
+            >
+              Completá el formulario
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800">
+      <div
+        class="container mx-auto px-6 py-8 text-center text-sm text-gray-400"
+      >
+        <p>&copy; 2025 ROSDEV GROUP. Todos los derechos reservados.</p>
+        <p class="mt-2">
+          Consultoría · ERP · BI · Nearshoring · Branding · Soluciones con IA
+        </p>
+        <div class="mt-4 flex justify-center items-center gap-6">
+          <a href="mailto:contacto@rosdevgroup.com" class="hover:text-white"
+            >contacto@rosdevgroup.com</a
+          >
+          <a href="#" class="hover:text-white">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
