@@ -1,6 +1,7 @@
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { Reveal } from './animations/Reveal'
+import { ImageWithSkeleton } from './ui/ImageWithSkeleton'
 
 export default function Projects() {
     const { language } = useLanguage()
@@ -11,17 +12,17 @@ export default function Projects() {
             <Reveal width="100%">
                 <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base/7 font-semibold text-gradient-rosdev">{t.title}</h2>
-                    <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#2E2E2E] sm:text-5xl lg:text-balance">
+                    <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#2E2E2E] sm:text-5xl lg:text-balance dark:text-white">
                         {t.headline}
                     </p>
-                    <p className="mt-6 text-lg/8 text-gray-600">{t.description}</p>
+                    <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">{t.description}</p>
                 </div>
             </Reveal>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 {t.items.map((project, index) => (
                     <Reveal key={project.name} delay={0.2 + index * 0.1} width="100%">
-                        <div className="relative overflow-hidden rounded-2xl bg-gray-50 transition-transform hover:scale-[1.01] hover:shadow-lg">
-                            <img
+                        <div className="relative overflow-hidden rounded-2xl bg-gray-50 transition-transform hover:scale-[1.01] hover:shadow-lg dark:bg-gray-800">
+                            <ImageWithSkeleton
                                 src={`https://images.unsplash.com/photo-${index === 0
                                     ? '1586528116311-ad8dd3c8310d' // logistics
                                     : index === 1
@@ -37,8 +38,8 @@ export default function Projects() {
                                 className="h-64 w-full object-cover"
                             />
                             <div className="p-8">
-                                <h3 className="text-xl font-semibold text-[#2E2E2E]">{project.name}</h3>
-                                <div className="mt-4 space-y-2 text-sm text-gray-600">
+                                <h3 className="text-xl font-semibold text-[#2E2E2E] dark:text-white">{project.name}</h3>
+                                <div className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
                                     <p>
                                         <span className="font-semibold">{t.labels.challenge}:</span> {project.challenge}
                                     </p>

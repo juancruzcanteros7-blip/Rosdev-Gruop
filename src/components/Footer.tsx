@@ -97,16 +97,16 @@ export default function Footer() {
 
     return (
         <footer className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="border-t border-gray-200 py-12 md:flex md:items-center md:justify-between">
+            <div className="border-t border-gray-200 py-12 md:flex md:items-center md:justify-between dark:border-gray-800">
                 <div className="flex justify-center gap-x-6 md:order-2">
                     {footerNavigation.social.map((item) => (
-                        <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800">
+                        <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
                             <span className="sr-only">{item.name}</span>
                             <item.icon aria-hidden="true" className="size-6" />
                         </a>
                     ))}
                 </div>
-                <p className="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0">
+                <p className="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">
                     {t.copyright}
                 </p>
             </div>

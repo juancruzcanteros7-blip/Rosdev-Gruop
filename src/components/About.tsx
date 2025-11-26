@@ -1,4 +1,4 @@
-
+import type { ReactElement } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { Reveal } from './animations/Reveal'
@@ -89,7 +89,7 @@ function AiIcon() {
     )
 }
 
-const featureIcons: Record<string, () => JSX.Element> = {
+const featureIcons: Record<string, () => ReactElement> = {
     purpose: PurposeIcon,
     team: TeamIcon,
     ai: AiIcon,

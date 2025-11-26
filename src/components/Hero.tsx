@@ -10,7 +10,7 @@ export default function Hero() {
     const t = translations[language].hero
 
     return (
-        <section className="relative isolate overflow-hidden bg-white px-6 pt-24 pb-20 sm:pt-32 sm:pb-28 lg:px-8 lg:pt-40">
+        <section className="relative isolate overflow-hidden bg-white px-6 pt-24 pb-20 sm:pt-32 sm:pb-28 lg:px-8 lg:pt-40 dark:bg-gray-900 transition-colors duration-300">
             <Parallax offset={50} className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
                 <div
                     style={{
@@ -37,7 +37,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
-                    className="mt-6 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
+                    className="mt-6 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 dark:text-gray-300"
                 >
                     {t.subtitle}
                 </motion.p>

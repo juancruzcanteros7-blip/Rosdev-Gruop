@@ -1,14 +1,16 @@
 import { useState, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, GlobeAltIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import RosdevLogo from '../assets/ROSDEV.svg'
 import { useLanguage } from '../context/LanguageContext'
+import { useTheme } from '../context/ThemeContext'
 import { translations } from '../data/translations'
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const { language, toggleLanguage } = useLanguage()
+    const { theme, setTheme } = useTheme()
     const navItems = translations[language].nav.items
 
     return (
@@ -41,12 +43,23 @@ export default function Navbar() {
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+                    <button
+                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                        className="flex items-center gap-2 rounded-full bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/20 dark:hover:bg-white/20"
+                        aria-label="Toggle theme"
+                    >
+                        {theme === 'dark' ? (
+                            <SunIcon className="size-5" />
+                        ) : (
+                            <MoonIcon className="size-5" />
+                        )}
+                    </button>
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 rounded-full bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition hover:bg-white"
+                        className="flex items-center gap-2 rounded-full bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/20 dark:hover:bg-white/20"
                     >
-                        <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700" />
+                        <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700 dark:text-gray-300" />
                         <span className="uppercase">{language}</span>
                     </button>
                 </div>
@@ -104,15 +117,34 @@ export default function Navbar() {
                                                 </Link>
                                             ))}
                                         </div>
-                                        <div className="py-6">
+                                        <div className="py-6 flex gap-4">
+                                            <button
+                                                onClick={() => {
+                                                    setTheme(theme === 'dark' ? 'light' : 'dark')
+                                                    setMobileMenuOpen(false)
+                                                }}
+                                                className="-mx-3 flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/10"
+                                            >
+                                                {theme === 'dark' ? (
+                                                    <>
+                                                        <SunIcon className="size-5" />
+                                                        <span>Light Mode</span>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <MoonIcon className="size-5" />
+                                                        <span>Dark Mode</span>
+                                                    </>
+                                                )}
+                                            </button>
                                             <button
                                                 onClick={() => {
                                                     toggleLanguage()
                                                     setMobileMenuOpen(false)
                                                 }}
-                                                className="-mx-3 flex w-full items-center gap-2 rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                className="-mx-3 flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/10"
                                             >
-                                                <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700" />
+                                                <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700 dark:text-gray-300" />
                                                 <span className="uppercase">{language}</span>
                                             </button>
                                         </div>
