@@ -31,6 +31,9 @@ export default function Projects() {
                                             : '1563013544-824ae1b704d3' // fintech
                                     }?w=800&auto=format&fit=crop`}
                                 alt={project.name}
+                                width={800}
+                                height={600}
+                                loading="lazy"
                                 className="h-64 w-full object-cover"
                             />
                             <div className="p-8">

@@ -62,6 +62,7 @@ export default function SecondaryFeatures() {
                         src="https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png"
                         width={2432}
                         height={1442}
+                        loading="lazy"
                         className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
                     />
                     <div aria-hidden="true" className="relative">

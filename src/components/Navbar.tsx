@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import { Dialog, DialogPanel } from '@headlessui/react'
+import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 import RosdevLogo from '../assets/ROSDEV.svg'
 import { useLanguage } from '../context/LanguageContext'
@@ -51,53 +51,78 @@ export default function Navbar() {
                     </button>
                 </div>
             </nav>
-            <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                <div className="fixed inset-0 z-40" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center justify-between">
-                        <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                            <span className="sr-only">ROSDEV GROUP</span>
-                            <img src={RosdevLogo} alt="ROSDEV GROUP" className="h-8 w-auto" />
-                        </Link>
-                        <button
-                            type="button"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            <Transition show={mobileMenuOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-50 lg:hidden" onClose={setMobileMenuOpen}>
+                    <TransitionChild
+                        as={Fragment}
+                        enter="transition-opacity ease-linear duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="transition-opacity ease-linear duration-300"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </TransitionChild>
+
+                    <div className="fixed inset-0 z-50 flex">
+                        <TransitionChild
+                            as={Fragment}
+                            enter="transition ease-in-out duration-300 transform"
+                            enterFrom="translate-x-full"
+                            enterTo="translate-x-0"
+                            leave="transition ease-in-out duration-300 transform"
+                            leaveFrom="translate-x-0"
+                            leaveTo="translate-x-full"
                         >
-                            <span className="sr-only">Close menu</span>
-                            <XMarkIcon aria-hidden="true" className="size-6" />
-                        </button>
-                    </div>
-                    <div className="mt-6 flow-root">
-                        <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="space-y-2 py-6">
-                                {navItems.map((item) => (
-                                    <Link
-                                        key={item.id}
-                                        to={`/#${item.id}`}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                    >
-                                        {item.label}
+                            <DialogPanel className="relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto bg-white py-6 shadow-xl">
+                                <div className="px-6 flex items-center justify-between">
+                                    <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                                        <span className="sr-only">ROSDEV GROUP</span>
+                                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="h-8 w-auto" />
                                     </Link>
-                                ))}
-                            </div>
-                            <div className="py-6">
-                                <button
-                                    onClick={() => {
-                                        toggleLanguage()
-                                        setMobileMenuOpen(false)
-                                    }}
-                                    className="-mx-3 flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700" />
-                                    <span className="uppercase">{language}</span>
-                                </button>
-                            </div>
-                        </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                    >
+                                        <span className="sr-only">Close menu</span>
+                                        <XMarkIcon aria-hidden="true" className="size-6" />
+                                    </button>
+                                </div>
+                                <div className="mt-6 flow-root px-6">
+                                    <div className="-my-6 divide-y divide-gray-500/10">
+                                        <div className="space-y-2 py-6">
+                                            {navItems.map((item) => (
+                                                <Link
+                                                    key={item.id}
+                                                    to={`/#${item.id}`}
+                                                    className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                        <div className="py-6">
+                                            <button
+                                                onClick={() => {
+                                                    toggleLanguage()
+                                                    setMobileMenuOpen(false)
+                                                }}
+                                                className="-mx-3 flex w-full items-center gap-2 rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                            >
+                                                <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700" />
+                                                <span className="uppercase">{language}</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </DialogPanel>
+                        </TransitionChild>
                     </div>
-                </DialogPanel>
-            </Dialog>
+                </Dialog>
+            </Transition>
         </header>
     )
 }

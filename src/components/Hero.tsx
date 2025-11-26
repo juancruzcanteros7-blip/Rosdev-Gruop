@@ -24,6 +24,7 @@ export default function Hero() {
             <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
                 <div className="text-4xl font-semibold tracking-tight text-balance text-gradient-rosdev sm:text-5xl min-h-[3.5rem] sm:min-h-[4rem]">
                     <TypeAnimation
+                        key={language}
                         sequence={[t.title, 1000]}
                         wrapper="h1"
                         speed={50}

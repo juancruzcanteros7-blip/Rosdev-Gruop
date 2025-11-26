@@ -121,6 +121,9 @@ export default function About() {
                         <img
                             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop"
                             alt="Team collaboration"
+                            width={1200}
+                            height={800}
+                            loading="lazy"
                             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                         />
                     </div>
