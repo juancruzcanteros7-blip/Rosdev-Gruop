@@ -16,8 +16,8 @@ export default function Ecosystem() {
         <section className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
             <Reveal width="100%">
                 <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-base font-semibold text-[#7C3AED]">{t.title}</h2>
-                    <p className="mt-3 text-lg text-gray-700">
+                    <h2 className="text-base font-semibold text-[#7C3AED] dark:text-[#A78BFA]">{t.title}</h2>
+                    <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
                         {beforeBrand}
                         <span className="font-semibold text-gradient-rosdev">{brand}</span>
                         {afterBrand || ''}
@@ -27,18 +27,18 @@ export default function Ecosystem() {
 
             <StaggerContainer className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
                 <StaggerItem>
-                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:scale-[1.02] hover:shadow-md">
+                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:scale-[1.02] hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
                         <img src={HoomindLogo} alt={t.hoomind.title} className="h-12 w-auto" />
-                        <p className="mt-3 text-sm font-medium text-gray-800">{t.hoomind.memberOf}</p>
-                        <p className="mt-3 text-sm text-gray-600">{t.hoomind.description}</p>
+                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">{t.hoomind.memberOf}</p>
+                        <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">{t.hoomind.description}</p>
                     </div>
                 </StaggerItem>
 
                 <StaggerItem>
-                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:scale-[1.02] hover:shadow-md">
+                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:scale-[1.02] hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
                         <img src={TinyLogo} alt={t.tinyStudio.title} className="h-10 w-auto" />
-                        <p className="mt-3 text-sm font-medium text-gray-800">{t.tinyStudio.memberOf}</p>
-                        <p className="mt-3 text-sm text-gray-600">{t.tinyStudio.description}</p>
+                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">{t.tinyStudio.memberOf}</p>
+                        <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">{t.tinyStudio.description}</p>
                     </div>
                 </StaggerItem>
             </StaggerContainer>

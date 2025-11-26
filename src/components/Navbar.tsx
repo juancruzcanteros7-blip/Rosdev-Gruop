@@ -14,7 +14,7 @@ export default function Navbar() {
     const navItems = translations[language].nav.items
 
     return (
-        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur dark:bg-gray-900/90">
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Link to="/" className="-m-1.5 p-1.5">
@@ -26,7 +26,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon aria-hidden="true" className="size-6" />
@@ -37,7 +37,7 @@ export default function Navbar() {
                         <Link
                             key={item.id}
                             to={`/#${item.id}`}
-                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-[#7C3AED]"
+                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-[#7C3AED] dark:text-gray-200 dark:hover:text-[#A78BFA]"
                         >
                             {item.label}
                         </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
                             leaveFrom="translate-x-0"
                             leaveTo="translate-x-full"
                         >
-                            <DialogPanel className="relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto bg-white py-6 shadow-xl">
+                            <DialogPanel className="relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto bg-white py-6 shadow-xl dark:bg-gray-900">
                                 <div className="px-6 flex items-center justify-between">
                                     <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                                         <span className="sr-only">ROSDEV GROUP</span>
@@ -97,20 +97,20 @@ export default function Navbar() {
                                     <button
                                         type="button"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                        className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
                                     >
                                         <span className="sr-only">Close menu</span>
                                         <XMarkIcon aria-hidden="true" className="size-6" />
                                     </button>
                                 </div>
                                 <div className="mt-6 flow-root px-6">
-                                    <div className="-my-6 divide-y divide-gray-500/10">
+                                    <div className="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
                                         <div className="space-y-2 py-6">
                                             {navItems.map((item) => (
                                                 <Link
                                                     key={item.id}
                                                     to={`/#${item.id}`}
-                                                    className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                    className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800"
                                                     onClick={() => setMobileMenuOpen(false)}
                                                 >
                                                     {item.label}

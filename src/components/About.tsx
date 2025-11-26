@@ -106,8 +106,8 @@ export default function About() {
             <Reveal width="100%">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-sm font-semibold uppercase tracking-wide text-gradient-rosdev">{t.title}</h2>
-                    <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl">{t.headline}</p>
-                    <p className="mt-4 text-lg text-gray-700">
+                    <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl dark:text-white">{t.headline}</p>
+                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
                         {beforeBrand}
                         <span className="font-semibold text-gradient-rosdev">{brand}</span>
                         {afterBrand || ''}
@@ -117,7 +117,7 @@ export default function About() {
 
             <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-[1.1fr_0.9fr]">
                 <Reveal direction="right" delay={0.4}>
-                    <div className="overflow-hidden rounded-3xl shadow-xl shadow-gray-200/70 ring-1 ring-gray-200">
+                    <div className="overflow-hidden rounded-3xl shadow-xl shadow-gray-200/70 ring-1 ring-gray-200 dark:shadow-gray-800/70 dark:ring-gray-700">
                         <img
                             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop"
                             alt="Team collaboration"
@@ -134,13 +134,13 @@ export default function About() {
                         const Icon = featureIcons[feature.id]
                         return (
                             <Reveal key={feature.id} delay={0.5 + index * 0.1} direction="left" width="100%">
-                                <div className="flex items-start gap-4 rounded-2xl bg-gray-50/80 p-4 ring-1 ring-gray-100 transition-all hover:bg-white hover:shadow-md">
-                                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#edeaff] text-[#4F46E5] ring-1 ring-[#e0d6ff] leading-none">
+                                <div className="flex items-start gap-4 rounded-2xl bg-gray-50/80 p-4 ring-1 ring-gray-100 transition-all hover:bg-white hover:shadow-md dark:bg-gray-800/50 dark:ring-gray-700 dark:hover:bg-gray-800">
+                                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#edeaff] text-[#4F46E5] ring-1 ring-[#e0d6ff] leading-none dark:bg-[#4F46E5]/20 dark:text-[#A78BFA] dark:ring-[#4F46E5]/30">
                                         <Icon />
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="text-lg font-semibold text-[#2E2E2E]">{feature.title}</h3>
-                                        <p className="text-sm text-gray-700">{feature.description}</p>
+                                        <h3 className="text-lg font-semibold text-[#2E2E2E] dark:text-white">{feature.title}</h3>
+                                        <p className="text-sm text-gray-700 dark:text-gray-300">{feature.description}</p>
                                     </div>
                                 </div>
                             </Reveal>
