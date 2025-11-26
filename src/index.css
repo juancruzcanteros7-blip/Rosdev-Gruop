@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer theme {
+    :root {
+        --color-brand-purple: #7C3AED;
+        --color-brand-dark: #2E2E2E;
+        --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+}
+
+@layer base {
+    body {
+        font-family: var(--font-family-base);
+    }
+
+    .text-gradient-rosdev {
+        background: linear-gradient(90deg, #155DFC 0%, #9810FA 50%, #155DFC 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
