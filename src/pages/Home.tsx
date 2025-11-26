@@ -7,10 +7,13 @@ import LogoCloud from '../components/LogoCloud'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import StructuredData from '../components/StructuredData'
+import ScrollToTop from '../components/ScrollToTop'
 
 export default function Home() {
     return (
         <div className="bg-white">
+            <StructuredData />
             <Navbar />
             <main>
                 <Hero />
@@ -22,6 +25,8 @@ export default function Home() {
                 <CTA />
             </main>
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }
+

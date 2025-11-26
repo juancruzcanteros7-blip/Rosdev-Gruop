@@ -1,5 +1,7 @@
+
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import { Reveal } from './animations/Reveal'
 
 function PurposeIcon() {
     return (
@@ -101,47 +103,56 @@ export default function About() {
 
     return (
         <section id="about" className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-                <h2 className="text-sm font-semibold uppercase tracking-wide text-gradient-rosdev">{t.title}</h2>
-                <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl">{t.headline}</p>
-                <p className="mt-4 text-lg text-gray-700">
-                    {beforeBrand}
-                    <span className="font-semibold text-gradient-rosdev">{brand}</span>
-                    {afterBrand || ''}
-                </p>
-            </div>
+            <Reveal width="100%">
+                <div className="mx-auto max-w-3xl text-center">
+                    <h2 className="text-sm font-semibold uppercase tracking-wide text-gradient-rosdev">{t.title}</h2>
+                    <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl">{t.headline}</p>
+                    <p className="mt-4 text-lg text-gray-700">
+                        {beforeBrand}
+                        <span className="font-semibold text-gradient-rosdev">{brand}</span>
+                        {afterBrand || ''}
+                    </p>
+                </div>
+            </Reveal>
 
             <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="overflow-hidden rounded-3xl shadow-xl shadow-gray-200/70 ring-1 ring-gray-200">
-                    <img
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop"
-                        alt="Team collaboration"
-                        className="h-full w-full object-cover"
-                    />
-                </div>
+                <Reveal direction="right" delay={0.4}>
+                    <div className="overflow-hidden rounded-3xl shadow-xl shadow-gray-200/70 ring-1 ring-gray-200">
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop"
+                            alt="Team collaboration"
+                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                    </div>
+                </Reveal>
+
                 <div className="flex flex-col justify-center gap-6">
-                    {t.features.map((feature) => {
+                    {t.features.map((feature, index) => {
                         const Icon = featureIcons[feature.id]
                         return (
-                            <div key={feature.id} className="flex items-start gap-4 rounded-2xl bg-gray-50/80 p-4 ring-1 ring-gray-100">
-                                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#edeaff] text-[#4F46E5] ring-1 ring-[#e0d6ff] leading-none">
-                                    <Icon />
+                            <Reveal key={feature.id} delay={0.5 + index * 0.1} direction="left" width="100%">
+                                <div className="flex items-start gap-4 rounded-2xl bg-gray-50/80 p-4 ring-1 ring-gray-100 transition-all hover:bg-white hover:shadow-md">
+                                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#edeaff] text-[#4F46E5] ring-1 ring-[#e0d6ff] leading-none">
+                                        <Icon />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h3 className="text-lg font-semibold text-[#2E2E2E]">{feature.title}</h3>
+                                        <p className="text-sm text-gray-700">{feature.description}</p>
+                                    </div>
                                 </div>
-                                <div className="space-y-1">
-                                    <h3 className="text-lg font-semibold text-[#2E2E2E]">{feature.title}</h3>
-                                    <p className="text-sm text-gray-700">{feature.description}</p>
-                                </div>
-                            </div>
+                            </Reveal>
                         )
                     })}
                 </div>
             </div>
 
-            <div className="mx-auto mt-12 max-w-5xl">
-                <div className="rounded-3xl bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#9F1CFA] px-8 py-8 text-center text-lg font-semibold text-white shadow-lg sm:text-xl">
-                    {t.tagline}
+            <Reveal delay={0.8} width="100%">
+                <div className="mx-auto mt-12 max-w-5xl">
+                    <div className="rounded-3xl bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#9F1CFA] px-8 py-8 text-center text-lg font-semibold text-white shadow-lg sm:text-xl transform transition-transform hover:scale-[1.01]">
+                        {t.tagline}
+                    </div>
                 </div>
-            </div>
+            </Reveal>
         </section>
     )
 }
