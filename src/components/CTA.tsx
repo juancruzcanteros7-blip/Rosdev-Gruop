@@ -23,7 +23,7 @@ export default function CTA() {
                 />
             </div>
             <Reveal width="100%">
-                <div className="mx-auto max-w-4xl rounded-3xl border border-gray-100 bg-white/90 px-8 py-10 text-center shadow-xl shadow-indigo-50/50 backdrop-blur sm:px-10 sm:py-12 transition-transform hover:scale-[1.01] dark:border-gray-700 dark:bg-gray-800/90 dark:shadow-purple-900/20">
+                <div className="mx-auto max-w-4xl rounded-3xl border border-gray-100 bg-white/90 px-8 py-10 text-center shadow-xl shadow-indigo-50/50 backdrop-blur sm:px-10 sm:py-12 transition-transform hover:scale-[1.01] dark:border-gray-700 dark:bg-gray-900/90 dark:shadow-purple-900/20">
                     <h2 className="text-3xl font-semibold tracking-tight text-gradient-rosdev sm:text-4xl">{t.title}</h2>
                     <p className="mt-4 text-base text-gray-700 sm:text-lg dark:text-gray-300">{t.description}</p>
                     <div className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4">

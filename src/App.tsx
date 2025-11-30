@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
+import ScrollToTopHandler from './components/ScrollToTopHandler'
 import { LanguageProvider } from './context/LanguageContext'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -9,8 +10,18 @@ function App() {
     <LanguageProvider>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={
+            <>
+              <ScrollToTopHandler />
+              <Home />
+            </>
+          } />
+          <Route path="/contact" element={
+            <>
+              <ScrollToTopHandler />
+              <Contact />
+            </>
+          } />
         </Routes>
       </ThemeProvider>
     </LanguageProvider>

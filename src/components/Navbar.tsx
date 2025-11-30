@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, GlobeAltIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import RosdevLogo from '../assets/ROSDEV.svg'
+import RosdevLogoDark from '../assets/ROSDEV-dark.svg'
 import { useLanguage } from '../context/LanguageContext'
 import { useTheme } from '../context/ThemeContext'
 import { translations } from '../data/translations'
@@ -11,7 +12,8 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const { language, toggleLanguage } = useLanguage()
     const { theme, setTheme } = useTheme()
-    const navItems = translations[language].nav.items
+    const t = translations[language].nav
+    const navItems = t.items
 
     return (
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur dark:bg-gray-900/90">
@@ -19,7 +21,8 @@ export default function Navbar() {
                 <div className="flex lg:flex-1">
                     <Link to="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">ROSDEV GROUP</span>
-                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="h-8 w-auto" />
+                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="block h-8 w-auto dark:hidden" />
+                        <img src={RosdevLogoDark} alt="ROSDEV GROUP" className="hidden h-8 w-auto dark:block" />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -28,7 +31,7 @@ export default function Navbar() {
                         onClick={() => setMobileMenuOpen(true)}
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
                     >
-                        <span className="sr-only">Open main menu</span>
+                        <span className="sr-only">{t.mobile.openMenu}</span>
                         <Bars3Icon aria-hidden="true" className="size-6" />
                     </button>
                 </div>
@@ -36,8 +39,8 @@ export default function Navbar() {
                     {navItems.map((item) => (
                         <Link
                             key={item.id}
-                            to={`/#${item.id}`}
-                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-[#7C3AED] dark:text-gray-200 dark:hover:text-[#A78BFA]"
+                            to={item.id === 'home' ? '/' : item.id === 'contact' ? '/contact' : `/#${item.id}`}
+                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-brand-purple dark:text-gray-200 dark:hover:text-brand-purple-light"
                         >
                             {item.label}
                         </Link>
@@ -92,14 +95,15 @@ export default function Navbar() {
                                 <div className="px-6 flex items-center justify-between">
                                     <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                                         <span className="sr-only">ROSDEV GROUP</span>
-                                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="h-8 w-auto" />
+                                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="block h-8 w-auto dark:hidden" />
+                                        <img src={RosdevLogoDark} alt="ROSDEV GROUP" className="hidden h-8 w-auto dark:block" />
                                     </Link>
                                     <button
                                         type="button"
                                         onClick={() => setMobileMenuOpen(false)}
                                         className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
                                     >
-                                        <span className="sr-only">Close menu</span>
+                                        <span className="sr-only">{t.mobile.closeMenu}</span>
                                         <XMarkIcon aria-hidden="true" className="size-6" />
                                     </button>
                                 </div>
@@ -109,7 +113,7 @@ export default function Navbar() {
                                             {navItems.map((item) => (
                                                 <Link
                                                     key={item.id}
-                                                    to={`/#${item.id}`}
+                                                    to={item.id === 'home' ? '/' : item.id === 'contact' ? '/contact' : `/#${item.id}`}
                                                     className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800"
                                                     onClick={() => setMobileMenuOpen(false)}
                                                 >
@@ -128,12 +132,12 @@ export default function Navbar() {
                                                 {theme === 'dark' ? (
                                                     <>
                                                         <SunIcon className="size-5" />
-                                                        <span>Light Mode</span>
+                                                        <span>{t.mobile.lightMode}</span>
                                                     </>
                                                 ) : (
                                                     <>
                                                         <MoonIcon className="size-5" />
-                                                        <span>Dark Mode</span>
+                                                        <span>{t.mobile.darkMode}</span>
                                                     </>
                                                 )}
                                             </button>

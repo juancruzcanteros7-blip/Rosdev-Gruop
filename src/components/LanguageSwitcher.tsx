@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
                 aria-label="Toggle Language"
             >
                 <div
-                    className={`absolute h-8 w-8 rounded-full bg-white shadow-md transition-all duration-300 ease-in-out ${language === 'es' ? 'translate-x-10' : 'translate-x-0'
+                    className={`absolute h-8 w-8 rounded-full bg-white shadow-md transition-all duration-300 ease-in-out dark:bg-gray-700 ${language === 'es' ? 'translate-x-10' : 'translate-x-0'
                         }`}
                 />
                 <span

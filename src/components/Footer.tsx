@@ -1,31 +1,7 @@
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
-const footerNavigation = {
-    solutions: [
-        { name: 'Hosting', href: '#' },
-        { name: 'Data Services', href: '#' },
-        { name: 'Uptime Monitoring', href: '#' },
-        { name: 'Enterprise Services', href: '#' },
-    ],
-    support: [
-        { name: 'Pricing', href: '#' },
-        { name: 'Documentation', href: '#' },
-        { name: 'Guides', href: '#' },
-        { name: 'API Reference', href: '#' },
-    ],
-    company: [
-        { name: 'About', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Jobs', href: '#' },
-        { name: 'Press', href: '#' },
-        { name: 'Partners', href: '#' },
-    ],
-    legal: [
-        { name: 'Claim', href: '#' },
-        { name: 'Privacy', href: '#' },
-        { name: 'Terms', href: '#' },
-    ],
+const socialNavigation = {
     social: [
         {
             name: 'Facebook',
@@ -99,8 +75,8 @@ export default function Footer() {
         <footer className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="border-t border-gray-200 py-12 md:flex md:items-center md:justify-between dark:border-gray-800">
                 <div className="flex justify-center gap-x-6 md:order-2">
-                    {footerNavigation.social.map((item) => (
-                        <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+                    {socialNavigation.social.map((item) => (
+                        <a key={item.name} href={item.href} className="text-gray-600 hover:text-brand-purple dark:text-gray-400 dark:hover:text-brand-purple-light">
                             <span className="sr-only">{item.name}</span>
                             <item.icon aria-hidden="true" className="size-6" />
                         </a>

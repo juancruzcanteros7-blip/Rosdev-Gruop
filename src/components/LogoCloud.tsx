@@ -18,7 +18,7 @@ export default function LogoCloud() {
                 {placeholders.map((_, idx) => (
                     <div
                         key={idx}
-                        className="flex h-20 items-center justify-center rounded-2xl border border-gray-200 bg-white text-sm font-medium text-gray-400 shadow-sm"
+                        className="flex h-20 items-center justify-center rounded-2xl border border-gray-200 bg-white text-sm font-medium text-gray-400 shadow-sm dark:bg-gray-800 dark:border-gray-700"
                     >
                         logo
                     </div>

@@ -14,11 +14,18 @@ export const translations = {
     en: {
         nav: {
             items: [
+                { id: 'home', label: 'Home' },
                 { id: 'about', label: 'About' },
                 { id: 'services', label: 'Services' },
                 { id: 'projects', label: 'Projects' },
                 { id: 'contact', label: 'Contact' },
             ],
+            mobile: {
+                lightMode: 'Light Mode',
+                darkMode: 'Dark Mode',
+                closeMenu: 'Close menu',
+                openMenu: 'Open main menu',
+            },
         },
         hero: {
             badge: 'Latest Updates',
@@ -150,6 +157,67 @@ export const translations = {
             conclusion: 'With AI Autonomous Assistant, this ecosystem creates a unique advantage: technology, creativity and intelligence working as one.',
             conclusionTitle: 'The Unique Advantage',
         },
+        stats: {
+            title: 'Our track record',
+            headline: 'Trusted by industry leaders worldwide',
+            description: 'Our numbers speak for themselves. We deliver scale, reliability, and innovation.',
+            items: [
+                { id: 1, name: 'Expert Developers', value: '8,000+' },
+                { id: 2, name: 'Daily Interactions', value: '900m+' },
+                { id: 3, name: 'System Uptime', value: '99.9%' },
+                { id: 4, name: 'Projects Delivered', value: '12m' },
+            ],
+        },
+        primaryFeatures: {
+            title: 'Accelerate Growth',
+            headline: 'Technology that scales with you',
+            description: 'From development to deployment, we provide the infrastructure and tools for success.',
+            items: [
+                {
+                    name: 'Real-time Monitoring',
+                    description: "Keep track of your system's health with our advanced AI-driven monitoring tools.",
+                },
+                {
+                    name: 'Seamless Collaboration',
+                    description: 'Empower your teams to work together efficiently with integrated workflows.',
+                },
+                {
+                    name: 'Automated Workflows',
+                    description: 'Automate repetitive tasks and focus on what matters most: growing your business.',
+                },
+            ],
+        },
+        secondaryFeatures: {
+            title: 'Full-Stack Capabilities',
+            headline: 'Infrastructure Managed',
+            description: 'We handle the complexity of the infrastructure so you can focus on your product.',
+            items: [
+                {
+                    name: 'Continuous Integration',
+                    description: 'Streamline your development pipeline with automated CI/CD.',
+                },
+                {
+                    name: 'Enterprise Security',
+                    description: 'Bank-grade security protocols to protect your data and users.',
+                },
+                {
+                    name: 'Smart Queueing',
+                    description: 'Efficiently manage high-load operations with intelligent queue systems.',
+                },
+                {
+                    name: 'Threat Protection',
+                    description: 'Proactive AI-based threat detection and mitigation.',
+                },
+                {
+                    name: 'Robust APIs',
+                    description: 'Flexible and scalable APIs to connect all your services.',
+                },
+                {
+                    name: 'Reliable Backups',
+                    description: 'Automated backups to ensure your data is always safe and recoverable.',
+                },
+            ],
+        },
         clients: {
             title: 'Trusted by Industry Leaders',
             description: 'Companies and institutions that trust ROSDEV to take their projects to the next level.',
@@ -187,16 +255,59 @@ export const translations = {
         },
         footer: {
             copyright: 'ROSDEV GROUP (c) 2025 Consulting | ERP | BI | Nearshoring | Branding | AI Solutions.',
+            solutions: {
+                title: 'Solutions',
+                items: [
+                    { name: 'Hosting', href: '#' },
+                    { name: 'Data Services', href: '#' },
+                    { name: 'Uptime Monitoring', href: '#' },
+                    { name: 'Enterprise Services', href: '#' },
+                ],
+            },
+            support: {
+                title: 'Support',
+                items: [
+                    { name: 'Pricing', href: '#' },
+                    { name: 'Documentation', href: '#' },
+                    { name: 'Guides', href: '#' },
+                    { name: 'API Reference', href: '#' },
+                ],
+            },
+            company: {
+                title: 'Company',
+                items: [
+                    { name: 'About', href: '#' },
+                    { name: 'Blog', href: '#' },
+                    { name: 'Jobs', href: '#' },
+                    { name: 'Press', href: '#' },
+                    { name: 'Partners', href: '#' },
+                ],
+            },
+            legal: {
+                title: 'Legal',
+                items: [
+                    { name: 'Claim', href: '#' },
+                    { name: 'Privacy', href: '#' },
+                    { name: 'Terms', href: '#' },
+                ],
+            },
         },
     },
     es: {
         nav: {
             items: [
+                { id: 'home', label: 'Inicio' },
                 { id: 'about', label: 'Quiénes' },
                 { id: 'services', label: 'Servicios' },
                 { id: 'projects', label: 'Proyectos' },
                 { id: 'contact', label: 'Contacto' },
             ],
+            mobile: {
+                lightMode: 'Modo Claro',
+                darkMode: 'Modo Oscuro',
+                closeMenu: 'Cerrar menú',
+                openMenu: 'Abrir menú principal',
+            },
         },
         hero: {
             badge: 'Novedades',
@@ -328,6 +439,67 @@ export const translations = {
             conclusion: 'Junto a AI Autonomous Assistant, este ecosistema crea una ventaja única: tecnología, creatividad e inteligencia trabajando en conjunto.',
             conclusionTitle: 'La ventaja única',
         },
+        stats: {
+            title: 'Trayectoria Comprobada',
+            headline: 'Elegidos por líderes de la industria globalmente',
+            description: 'Nuestros números hablan por sí mismos. Entregamos escala, confiabilidad e innovación.',
+            items: [
+                { id: 1, name: 'Desarrolladores Expertos', value: '8,000+' },
+                { id: 2, name: 'Interacciones Diarias', value: '900m+' },
+                { id: 3, name: 'Uptime del Sistema', value: '99.9%' },
+                { id: 4, name: 'Proyectos Entregados', value: '12m' },
+            ],
+        },
+        primaryFeatures: {
+            title: 'Acelera el Crecimiento',
+            headline: 'Tecnología que escala con vos',
+            description: 'Desde el desarrollo hasta el despliegue, proveemos la infraestructura y herramientas para el éxito.',
+            items: [
+                {
+                    name: 'Monitoreo en Tiempo Real',
+                    description: 'Seguí el estado de tu sistema con nuestras herramientas avanzadas de monitoreo impulsadas por IA.',
+                },
+                {
+                    name: 'Colaboración Fluida',
+                    description: 'Empoderá a tus equipos para trabajar juntos eficientemente con flujos de trabajo integrados.',
+                },
+                {
+                    name: 'Flujos Automatizados',
+                    description: 'Automatizá tareas repetitivas y enfocate en lo más importante: hacer crecer tu negocio.',
+                },
+            ],
+        },
+        secondaryFeatures: {
+            title: 'Capacidades Full-Stack',
+            headline: 'Infraestructura Gestionada',
+            description: 'Manejamos la complejidad de la infraestructura para que puedas enfocarte en tu producto.',
+            items: [
+                {
+                    name: 'Integración Continua',
+                    description: 'Optimizá tu pipeline de desarrollo con CI/CD automatizado.',
+                },
+                {
+                    name: 'Seguridad Empresarial',
+                    description: 'Protocolos de seguridad de nivel bancario para proteger tus datos y usuarios.',
+                },
+                {
+                    name: 'Colas Inteligentes',
+                    description: 'Gestioná operaciones de alta carga eficientemente con sistemas de colas inteligentes.',
+                },
+                {
+                    name: 'Protección de Amenazas',
+                    description: 'Detección y mitigación proactiva de amenazas basada en IA.',
+                },
+                {
+                    name: 'APIs Robustas',
+                    description: 'APIs flexibles y escalables para conectar todos tus servicios.',
+                },
+                {
+                    name: 'Backups Confiables',
+                    description: 'Backups automatizados para asegurar que tus datos estén siempre seguros y recuperables.',
+                },
+            ],
+        },
         clients: {
             title: 'Elegidos por líderes de la industria',
             description: 'Empresas e instituciones que confían en ROSDEV GROUP para llevar sus proyectos al siguiente nivel.',
@@ -365,6 +537,42 @@ export const translations = {
         },
         footer: {
             copyright: 'ROSDEV GROUP (c) 2025 Consultoría | ERP | BI | Nearshoring | Branding | Soluciones con IA',
+            solutions: {
+                title: 'Soluciones',
+                items: [
+                    { name: 'Hosting', href: '#' },
+                    { name: 'Servicios de Datos', href: '#' },
+                    { name: 'Monitoreo Uptime', href: '#' },
+                    { name: 'Servicios Empresariales', href: '#' },
+                ],
+            },
+            support: {
+                title: 'Soporte',
+                items: [
+                    { name: 'Precios', href: '#' },
+                    { name: 'Documentación', href: '#' },
+                    { name: 'Guías', href: '#' },
+                    { name: 'Referencia API', href: '#' },
+                ],
+            },
+            company: {
+                title: 'Compañía',
+                items: [
+                    { name: 'Nosotros', href: '#' },
+                    { name: 'Blog', href: '#' },
+                    { name: 'Empleos', href: '#' },
+                    { name: 'Prensa', href: '#' },
+                    { name: 'Partners', href: '#' },
+                ],
+            },
+            legal: {
+                title: 'Legal',
+                items: [
+                    { name: 'Reclamos', href: '#' },
+                    { name: 'Privacidad', href: '#' },
+                    { name: 'Términos', href: '#' },
+                ],
+            },
         },
     },
 }

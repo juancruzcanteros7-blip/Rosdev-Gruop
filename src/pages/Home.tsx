@@ -20,7 +20,7 @@ const LoadingFallback = () => (
 
 export default function Home() {
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-gray-900">
             <StructuredData />
             <Navbar />
             <main>

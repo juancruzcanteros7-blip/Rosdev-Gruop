@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Skeleton } from './Skeleton'
 
-interface ImageWithSkeletonProps extends React.ImgHTMLAttributes<HTMLImageElement> { }
+type ImageWithSkeletonProps = React.ImgHTMLAttributes<HTMLImageElement>
 
 export function ImageWithSkeleton({ className, ...props }: ImageWithSkeletonProps) {
     const [isLoading, setIsLoading] = useState(true)
