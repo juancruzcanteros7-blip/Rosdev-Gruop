@@ -11,7 +11,10 @@ export default function Hero() {
 
     return (
         <section className="relative isolate overflow-hidden bg-white px-6 pt-24 pb-20 sm:pt-32 sm:pb-28 lg:px-8 lg:pt-40 dark:bg-gray-900 transition-colors duration-300">
-            <Parallax offset={50} className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+            <Parallax
+                offset={50}
+                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            >
                 <div
                     style={{
                         clipPath:
@@ -67,7 +70,10 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            <Parallax offset={-50} className="absolute inset-x-0 top-[calc(100%-10rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-25rem)]">
+            <Parallax
+                offset={-50}
+                className="absolute inset-x-0 top-[calc(100%-10rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-25rem)]"
+            >
                 <div
                     style={{
                         clipPath:

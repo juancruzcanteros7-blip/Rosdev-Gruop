@@ -23,14 +23,15 @@ export default function Projects() {
                     <Reveal key={project.name} delay={0.2 + index * 0.1} width="100%">
                         <div className="relative overflow-hidden rounded-2xl bg-gray-50 transition-transform hover:scale-[1.01] hover:shadow-lg dark:bg-gray-800">
                             <ImageWithSkeleton
-                                src={`https://images.unsplash.com/photo-${index === 0
-                                    ? '1586528116311-ad8dd3c8310d' // logistics
-                                    : index === 1
-                                        ? '1472851294608-062f824d29cc' // retail
-                                        : index === 2
+                                src={`https://images.unsplash.com/photo-${
+                                    index === 0
+                                        ? '1586528116311-ad8dd3c8310d' // logistics
+                                        : index === 1
+                                          ? '1472851294608-062f824d29cc' // retail
+                                          : index === 2
                                             ? '1524178232363-1fb2b075b655' // education
                                             : '1563013544-824ae1b704d3' // fintech
-                                    }?w=800&auto=format&fit=crop`}
+                                }?w=800&auto=format&fit=crop`}
                                 alt={project.name}
                                 width={800}
                                 height={600}

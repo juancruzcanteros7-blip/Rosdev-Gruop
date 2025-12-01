@@ -1,24 +1,15 @@
 import {
     ArrowPathIcon,
-import {
-        ArrowPathIcon,
-        CloudArrowUpIcon,
-        Cog6ToothIcon,
-        FingerPrintIcon,
-        LockClosedIcon,
-        ServerIcon,
-    } from '@heroicons/react/20/solid'
+    CloudArrowUpIcon,
+    Cog6ToothIcon,
+    FingerPrintIcon,
+    LockClosedIcon,
+    ServerIcon,
+} from '@heroicons/react/20/solid'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
-const icons = [
-    CloudArrowUpIcon,
-    LockClosedIcon,
-    ArrowPathIcon,
-    FingerPrintIcon,
-    Cog6ToothIcon,
-    ServerIcon,
-]
+const icons = [CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Cog6ToothIcon, ServerIcon]
 
 export default function SecondaryFeatures() {
     const { language } = useLanguage()
@@ -32,9 +23,7 @@ export default function SecondaryFeatures() {
                     <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl sm:text-balance dark:text-white">
                         {t.headline}
                     </p>
-                    <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">
-                        {t.description}
-                    </p>
+                    <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">{t.description}</p>
                 </div>
             </div>
             <div className="relative overflow-hidden pt-16">

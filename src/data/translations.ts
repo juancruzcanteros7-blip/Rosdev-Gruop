@@ -90,7 +90,8 @@ export const translations = {
                 },
                 {
                     name: 'Nearshoring',
-                    description: 'Specialized teams that seamlessly integrate into your projects with agility and trust.',
+                    description:
+                        'Specialized teams that seamlessly integrate into your projects with agility and trust.',
                     icon: UserGroupIcon,
                 },
                 {
@@ -154,7 +155,8 @@ export const translations = {
                 memberOf: 'Member of: RosDevGroup',
                 description: 'Specialists in branding, design and web development.',
             },
-            conclusion: 'With AI Autonomous Assistant, this ecosystem creates a unique advantage: technology, creativity and intelligence working as one.',
+            conclusion:
+                'With AI Autonomous Assistant, this ecosystem creates a unique advantage: technology, creativity and intelligence working as one.',
             conclusionTitle: 'The Unique Advantage',
         },
         stats: {
@@ -367,7 +369,8 @@ export const translations = {
                 },
                 {
                     name: 'Consultoría & BI',
-                    description: 'Transformamos datos en decisiones estratégicas mediante un análisis profundo y herramientas inteligentes.',
+                    description:
+                        'Transformamos datos en decisiones estratégicas mediante un análisis profundo y herramientas inteligentes.',
                     icon: ChartBarIcon,
                 },
                 {
@@ -436,7 +439,8 @@ export const translations = {
                 memberOf: 'Miembro de: RosDevGroup',
                 description: 'Especialistas en branding, diseño y desarrollo web.',
             },
-            conclusion: 'Junto a AI Autonomous Assistant, este ecosistema crea una ventaja única: tecnología, creatividad e inteligencia trabajando en conjunto.',
+            conclusion:
+                'Junto a AI Autonomous Assistant, este ecosistema crea una ventaja única: tecnología, creatividad e inteligencia trabajando en conjunto.',
             conclusionTitle: 'La ventaja única',
         },
         stats: {
@@ -453,19 +457,23 @@ export const translations = {
         primaryFeatures: {
             title: 'Acelera el Crecimiento',
             headline: 'Tecnología que escala con vos',
-            description: 'Desde el desarrollo hasta el despliegue, proveemos la infraestructura y herramientas para el éxito.',
+            description:
+                'Desde el desarrollo hasta el despliegue, proveemos la infraestructura y herramientas para el éxito.',
             items: [
                 {
                     name: 'Monitoreo en Tiempo Real',
-                    description: 'Seguí el estado de tu sistema con nuestras herramientas avanzadas de monitoreo impulsadas por IA.',
+                    description:
+                        'Seguí el estado de tu sistema con nuestras herramientas avanzadas de monitoreo impulsadas por IA.',
                 },
                 {
                     name: 'Colaboración Fluida',
-                    description: 'Empoderá a tus equipos para trabajar juntos eficientemente con flujos de trabajo integrados.',
+                    description:
+                        'Empoderá a tus equipos para trabajar juntos eficientemente con flujos de trabajo integrados.',
                 },
                 {
                     name: 'Flujos Automatizados',
-                    description: 'Automatizá tareas repetitivas y enfocate en lo más importante: hacer crecer tu negocio.',
+                    description:
+                        'Automatizá tareas repetitivas y enfocate en lo más importante: hacer crecer tu negocio.',
                 },
             ],
         },
@@ -484,7 +492,8 @@ export const translations = {
                 },
                 {
                     name: 'Colas Inteligentes',
-                    description: 'Gestioná operaciones de alta carga eficientemente con sistemas de colas inteligentes.',
+                    description:
+                        'Gestioná operaciones de alta carga eficientemente con sistemas de colas inteligentes.',
                 },
                 {
                     name: 'Protección de Amenazas',
@@ -496,13 +505,15 @@ export const translations = {
                 },
                 {
                     name: 'Backups Confiables',
-                    description: 'Backups automatizados para asegurar que tus datos estén siempre seguros y recuperables.',
+                    description:
+                        'Backups automatizados para asegurar que tus datos estén siempre seguros y recuperables.',
                 },
             ],
         },
         clients: {
             title: 'Elegidos por líderes de la industria',
-            description: 'Empresas e instituciones que confían en ROSDEV GROUP para llevar sus proyectos al siguiente nivel.',
+            description:
+                'Empresas e instituciones que confían en ROSDEV GROUP para llevar sus proyectos al siguiente nivel.',
         },
         cta: {
             title: 'Tu próximo paso comienza hoy',

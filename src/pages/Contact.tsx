@@ -13,7 +13,9 @@ export default function Contact() {
             <Navbar />
             <main className="relative isolate mx-auto mt-10 max-w-6xl scroll-m-24 px-6 pb-12 pt-8 sm:mt-10 sm:pb-16 sm:pt-10 lg:px-8">
                 <div className="mx-auto max-w-3xl text-center">
-                    <h1 className="text-3xl font-semibold tracking-tight text-gradient-rosdev sm:text-4xl">{t.title}</h1>
+                    <h1 className="text-3xl font-semibold tracking-tight text-gradient-rosdev sm:text-4xl">
+                        {t.title}
+                    </h1>
                     <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">{t.description}</p>
                 </div>
 
@@ -26,7 +28,9 @@ export default function Contact() {
                                     {t.hours.map((row) => (
                                         <div key={row.label} className="flex items-center justify-between">
                                             <span>{row.label}</span>
-                                            <span className="font-medium text-gray-900 dark:text-white">{row.value}</span>
+                                            <span className="font-medium text-gray-900 dark:text-white">
+                                                {row.value}
+                                            </span>
                                         </div>
                                     ))}
                                 </div>
@@ -37,7 +41,9 @@ export default function Contact() {
                                     <BuildingOffice2Icon aria-hidden="true" className="h-5 w-5" />
                                 </span>
                                 <div>
-                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t.addressLabel}</p>
+                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                                        {t.addressLabel}
+                                    </p>
                                     <p className="text-sm text-gray-600 dark:text-gray-300">{t.address}</p>
                                 </div>
                             </div>
@@ -47,8 +53,13 @@ export default function Contact() {
                                     <PhoneIcon aria-hidden="true" className="h-5 w-5" />
                                 </span>
                                 <div>
-                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t.phoneLabel}</p>
-                                    <a href={`tel:${t.phone}`} className="text-sm text-gray-600 hover:text-[#4F46E5] dark:text-gray-300 dark:hover:text-[#A78BFA]">
+                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                                        {t.phoneLabel}
+                                    </p>
+                                    <a
+                                        href={`tel:${t.phone}`}
+                                        className="text-sm text-gray-600 hover:text-[#4F46E5] dark:text-gray-300 dark:hover:text-[#A78BFA]"
+                                    >
                                         {t.phone}
                                     </a>
                                 </div>
@@ -59,8 +70,13 @@ export default function Contact() {
                                     <EnvelopeIcon aria-hidden="true" className="h-5 w-5" />
                                 </span>
                                 <div>
-                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t.emailLabel}</p>
-                                    <a href={`mailto:${t.email}`} className="text-sm text-gray-600 hover:text-[#4F46E5] dark:text-gray-300 dark:hover:text-[#A78BFA]">
+                                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                                        {t.emailLabel}
+                                    </p>
+                                    <a
+                                        href={`mailto:${t.email}`}
+                                        className="text-sm text-gray-600 hover:text-[#4F46E5] dark:text-gray-300 dark:hover:text-[#A78BFA]"
+                                    >
                                         {t.email}
                                     </a>
                                 </div>
@@ -71,7 +87,10 @@ export default function Contact() {
                     <form className="rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-sm shadow-gray-100 sm:p-8 dark:border-gray-700 dark:bg-gray-800/90 dark:shadow-none">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <div className="space-y-2">
-                                <label htmlFor="first-name" className="text-sm font-semibold text-gray-900 dark:text-white">
+                                <label
+                                    htmlFor="first-name"
+                                    className="text-sm font-semibold text-gray-900 dark:text-white"
+                                >
                                     {t.form.firstName}
                                 </label>
                                 <input
@@ -83,7 +102,10 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="last-name" className="text-sm font-semibold text-gray-900 dark:text-white">
+                                <label
+                                    htmlFor="last-name"
+                                    className="text-sm font-semibold text-gray-900 dark:text-white"
+                                >
                                     {t.form.lastName}
                                 </label>
                                 <input
@@ -107,7 +129,10 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="space-y-2 sm:col-span-2">
-                                <label htmlFor="phone-number" className="text-sm font-semibold text-gray-900 dark:text-white">
+                                <label
+                                    htmlFor="phone-number"
+                                    className="text-sm font-semibold text-gray-900 dark:text-white"
+                                >
                                     {t.form.phone}
                                 </label>
                                 <input
@@ -119,7 +144,10 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="space-y-2 sm:col-span-2">
-                                <label htmlFor="message" className="text-sm font-semibold text-gray-900 dark:text-white">
+                                <label
+                                    htmlFor="message"
+                                    className="text-sm font-semibold text-gray-900 dark:text-white"
+                                >
                                     {t.form.message}
                                 </label>
                                 <textarea

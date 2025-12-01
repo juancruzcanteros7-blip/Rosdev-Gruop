@@ -6,26 +6,32 @@ import { LanguageProvider } from './context/LanguageContext'
 import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
-  return (
-    <LanguageProvider>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <ScrollToTopHandler />
-              <Home />
-            </>
-          } />
-          <Route path="/contact" element={
-            <>
-              <ScrollToTopHandler />
-              <Contact />
-            </>
-          } />
-        </Routes>
-      </ThemeProvider>
-    </LanguageProvider>
-  )
+    return (
+        <LanguageProvider>
+            <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <ScrollToTopHandler />
+                                <Home />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/contact"
+                        element={
+                            <>
+                                <ScrollToTopHandler />
+                                <Contact />
+                            </>
+                        }
+                    />
+                </Routes>
+            </ThemeProvider>
+        </LanguageProvider>
+    )
 }
 
 export default App

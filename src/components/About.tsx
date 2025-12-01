@@ -106,7 +106,9 @@ export default function About() {
             <Reveal width="100%">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-sm font-semibold uppercase tracking-wide text-gradient-rosdev">{t.title}</h2>
-                    <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl dark:text-white">{t.headline}</p>
+                    <p className="mt-3 text-2xl font-semibold text-[#2E2E2E] sm:text-3xl dark:text-white">
+                        {t.headline}
+                    </p>
                     <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
                         {beforeBrand}
                         <span className="font-semibold text-gradient-rosdev">{brand}</span>
@@ -139,8 +141,12 @@ export default function About() {
                                         <Icon />
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="text-lg font-semibold text-[#2E2E2E] dark:text-white">{feature.title}</h3>
-                                        <p className="text-sm text-gray-700 dark:text-gray-300">{feature.description}</p>
+                                        <h3 className="text-lg font-semibold text-[#2E2E2E] dark:text-white">
+                                            {feature.title}
+                                        </h3>
+                                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                                            {feature.description}
+                                        </p>
                                     </div>
                                 </div>
                             </Reveal>

@@ -18,7 +18,9 @@ export default function Ecosystem() {
         <section className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
             <Reveal width="100%">
                 <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-base font-semibold text-brand-purple dark:text-brand-purple-light">{t.title}</h2>
+                    <h2 className="text-base font-semibold text-brand-purple dark:text-brand-purple-light">
+                        {t.title}
+                    </h2>
                     <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
                         {beforeBrand}
                         <span className="font-semibold text-gradient-rosdev">{brand}</span>
@@ -29,21 +31,35 @@ export default function Ecosystem() {
 
             <StaggerContainer className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
                 <StaggerItem>
-                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:border-brand-purple/50 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none dark:hover:border-brand-purple-light">
+                    <a
+                        href="https://hoomind.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:border-brand-purple/50 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none dark:hover:border-brand-purple-light"
+                    >
                         <img src={HoomindLogo} alt={t.hoomind.title} className="block h-12 w-auto dark:hidden" />
                         <img src={HoomindLogoDark} alt={t.hoomind.title} className="hidden h-12 w-auto dark:block" />
-                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">{t.hoomind.memberOf}</p>
+                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">
+                            {t.hoomind.memberOf}
+                        </p>
                         <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">{t.hoomind.description}</p>
-                    </div>
+                    </a>
                 </StaggerItem>
 
                 <StaggerItem>
-                    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:border-brand-purple/50 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none dark:hover:border-brand-purple-light">
+                    <a
+                        href="https://tinystudioar.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block rounded-2xl border border-gray-200 bg-white p-8 shadow-sm shadow-gray-100 transition-all hover:border-brand-purple/50 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:shadow-none dark:hover:border-brand-purple-light"
+                    >
                         <img src={TinyLogo} alt={t.tinyStudio.title} className="block h-10 w-auto dark:hidden" />
                         <img src={TinyLogoDark} alt={t.tinyStudio.title} className="hidden h-10 w-auto dark:block" />
-                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">{t.tinyStudio.memberOf}</p>
+                        <p className="mt-3 text-sm font-medium text-gray-800 dark:text-gray-200">
+                            {t.tinyStudio.memberOf}
+                        </p>
                         <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">{t.tinyStudio.description}</p>
-                    </div>
+                    </a>
                 </StaggerItem>
             </StaggerContainer>
 

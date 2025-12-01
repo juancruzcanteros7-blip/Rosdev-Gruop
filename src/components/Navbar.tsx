@@ -52,15 +52,12 @@ export default function Navbar() {
                         className="flex items-center gap-2 rounded-full bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/20 dark:hover:bg-white/20"
                         aria-label="Toggle theme"
                     >
-                        {theme === 'dark' ? (
-                            <SunIcon className="size-5" />
-                        ) : (
-                            <MoonIcon className="size-5" />
-                        )}
+                        {theme === 'dark' ? <SunIcon className="size-5" /> : <MoonIcon className="size-5" />}
                     </button>
                     <button
                         onClick={toggleLanguage}
                         className="flex items-center gap-2 rounded-full bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/20 dark:hover:bg-white/20"
+                        aria-label={language === 'en' ? 'Switch to Spanish' : 'Switch to English'}
                     >
                         <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700 dark:text-gray-300" />
                         <span className="uppercase">{language}</span>
@@ -95,8 +92,16 @@ export default function Navbar() {
                                 <div className="px-6 flex items-center justify-between">
                                     <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                                         <span className="sr-only">ROSDEV GROUP</span>
-                                        <img src={RosdevLogo} alt="ROSDEV GROUP" className="block h-8 w-auto dark:hidden" />
-                                        <img src={RosdevLogoDark} alt="ROSDEV GROUP" className="hidden h-8 w-auto dark:block" />
+                                        <img
+                                            src={RosdevLogo}
+                                            alt="ROSDEV GROUP"
+                                            className="block h-8 w-auto dark:hidden"
+                                        />
+                                        <img
+                                            src={RosdevLogoDark}
+                                            alt="ROSDEV GROUP"
+                                            className="hidden h-8 w-auto dark:block"
+                                        />
                                     </Link>
                                     <button
                                         type="button"
@@ -113,7 +118,13 @@ export default function Navbar() {
                                             {navItems.map((item) => (
                                                 <Link
                                                     key={item.id}
-                                                    to={item.id === 'home' ? '/' : item.id === 'contact' ? '/contact' : `/#${item.id}`}
+                                                    to={
+                                                        item.id === 'home'
+                                                            ? '/'
+                                                            : item.id === 'contact'
+                                                                ? '/contact'
+                                                                : `/#${item.id}`
+                                                    }
                                                     className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800"
                                                     onClick={() => setMobileMenuOpen(false)}
                                                 >
@@ -140,16 +151,6 @@ export default function Navbar() {
                                                         <span>{t.mobile.darkMode}</span>
                                                     </>
                                                 )}
-                                            </button>
-                                            <button
-                                                onClick={() => {
-                                                    toggleLanguage()
-                                                    setMobileMenuOpen(false)
-                                                }}
-                                                className="-mx-3 flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/10"
-                                            >
-                                                <GlobeAltIcon aria-hidden="true" className="size-5 text-gray-700 dark:text-gray-300" />
-                                                <span className="uppercase">{language}</span>
                                             </button>
                                         </div>
                                     </div>
